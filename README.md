@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Nav2 Waypoint Runner C++
 
 This is a standalone ROS2 C++ package for sending waypoint lists to Nav2's
@@ -64,3 +65,6 @@ poses:
 - position: {x: -4.85, y: 5.13, z: 0.0}
   orientation: {x: 0.0, y: 0.0, z: 0.0, w: 1.0}"
 ```
+=======
+# Agricultural_vehicle_nav_backend
+>>>>>>> 1451cc0fc0300b6de4b1fb0902c717ecb0859890
