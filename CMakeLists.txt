@@ -16,6 +16,7 @@ find_package(nav2_msgs REQUIRED)
 find_package(nav_msgs REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(rclcpp_action REQUIRED)
+find_package(std_msgs REQUIRED)
 
 add_executable(waypoint_subscriber src/waypoint_subscriber.cpp)
 ament_target_dependencies(
@@ -35,8 +36,16 @@ ament_target_dependencies(
   rclcpp
 )
 
+add_executable(waypoint_checker src/waypoint_checker.cpp)
+ament_target_dependencies(
+  waypoint_checker
+  nav_msgs
+  rclcpp
+  std_msgs
+)
+
 install(
-  TARGETS waypoint_subscriber publish_waypoints
+  TARGETS waypoint_subscriber publish_waypoints waypoint_checker
   DESTINATION lib/${PROJECT_NAME}
 )
 
